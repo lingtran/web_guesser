@@ -1,7 +1,18 @@
 <html>
   <head>
     <style>
-     body {background: red}
+     body {
+       <% if message == "You got it right!" %>
+       background: rgb(0,255,0);
+       <% elsif message == "Way too high!" || message == "Way too low!" %>
+       background: rgb(255,0,0);
+       <% elsif message == "Too high!" || message == "Too low!" %>
+       background: rgba(255,0,0,0.1);
+       <% else %>
+       background: rgb(255,255,255);
+       <% end %>
+
+     }
     </style>
   </head>
   <body>
