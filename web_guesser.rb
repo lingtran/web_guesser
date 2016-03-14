@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
 
-
 SECRET_NUMBER = rand(100)
 
 get '/' do
@@ -34,5 +33,5 @@ def answer(message)
     "The SECRET NUMBER is #{SECRET_NUMBER}"
   when message != "Make a guess!"
     "Try again!"
-  end 
+  end
 end
